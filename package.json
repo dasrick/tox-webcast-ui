@@ -14,19 +14,52 @@
   },
   "homepage": "https://github.com/dasrick/tox-webcast-ui#readme",
   "dependencies": {
+    "angular": "^1.4.7",
+    "angular-loading-bar": "^0.8.0",
+    "angular-resource": "^1.4.7",
+    "angular-translate": "^2.8.1",
+    "angular-translate-loader-partial": "^2.8.1",
+    "angular-ui-router": "^0.2.15",
     "clean-css": "^3.4.6",
     "express": "^4.13.3",
+    "font-awesome": "^4.4.0",
+    "fs-extra": "^0.24.0",
+    "glob": "^5.0.15",
+    "jscs": "^2.3.5",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.1",
+    "json-loader": "^0.5.3",
     "less": "^2.5.3",
-    "less-plugin-autoprefix": "^1.5.1"
+    "less-plugin-autoprefix": "^1.5.1",
+    "mi-angular-alert-service": "^2.0.4",
+    "ng-annotate-loader": "0.0.10",
+    "webpack": "^1.12.2"
   },
   "devDependencies": {
-    "david": "^6.4.0"
+    "angular-mocks": "^1.4.7",
+    "david": "^6.4.0",
+    "istanbul-instrumenter-loader": "^0.1.3",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.11",
+    "karma-coverage": "^0.5.3",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-webpack": "^1.7.0",
+    "phantomjs": "^1.9.18"
   },
   "scripts": {
-    "prebuild": "mkdir -p web/css/ ",
-    "build": "npm run build:css",
+    "postinstall": "npm run build",
+    "prebuild": "mkdir -p web/css/ web/js/ web/views/ web/fonts/font-awesome web/i18n",
+    "build": "npm run build:css && npm run build:views && npm run build:fonts && npm run build:i18n && npm run jscs && npm run jshint && npm run build:js",
+    "build:js": "webpack --config webpack.config.js",
     "build:css": "lessc --autoprefix='last 2 versions,ie 9' src/media/less/style.less web/css/style.css && cleancss --source-map -o web/css/style.min.css web/css/style.css",
+    "build:views": "node scripts/copy.js src/**/views/*.html web/views/",
+    "build:fonts": "npm run build:font-fontawesome",
+    "build:font-fontawesome": "cp -R node_modules/font-awesome/fonts/* web/fonts/font-awesome",
+    "build:i18n": "node scripts/copy.js src/**/translations/*.json web/i18n/",
+    "jscs": "jscs ./src ./tests ./scripts",
+    "jshint": "jshint ./src ./tests ./scripts --reporter node_modules/jshint-stylish/index.js",
     "start": "node serve.js",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "./node_modules/karma/bin/karma start karma.config.js"
   }
 }

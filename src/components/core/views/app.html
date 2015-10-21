@@ -1,0 +1,34 @@
+<header class="cs-3">
+    <aside class="col-left brand">
+        <a class="navbar-brand"
+           title="{{'core.application.label'|translate}} - {{coreVm.appversion}}"
+           ui-sref="app">
+            <i class="fa {{'core.application.icon'|translate}}"></i>
+            <span class="hidden-folded" translate="core.application.label"></span>
+        </a>
+    </aside>
+    <aside class="col-main" ui-view="header-middle"></aside>
+    <aside class="col-right" ui-view="header-right"></aside>
+</header>
+
+<main uxi-view="main">
+    <aside class="cs-1 col-main-full" uxi-view="content">
+        <section class="section-body">
+           mep
+        </section>
+
+        <section class="section-foot">
+            <ul class="nav text-center">
+                <li>
+                    <a ui-sref="app">
+                        currently: v{{coreVm.appversion}}
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </aside>
+</main>
+
+<div class="global-alerts" ng-cloak>
+    <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="alert.close()">{{alert.msg}}</uib-alert>
+</div>
