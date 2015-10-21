@@ -14,12 +14,18 @@
   },
   "homepage": "https://github.com/dasrick/tox-webcast-ui#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "clean-css": "^3.4.6",
+    "express": "^4.13.3",
+    "less": "^2.5.3",
+    "less-plugin-autoprefix": "^1.5.1"
   },
   "devDependencies": {
     "david": "^6.4.0"
   },
   "scripts": {
+    "prebuild": "mkdir -p web/css/ ",
+    "build": "npm run build:css",
+    "build:css": "lessc --autoprefix='last 2 versions,ie 9' src/media/less/style.less web/css/style.css && cleancss --source-map -o web/css/style.min.css web/css/style.css",
     "start": "node serve.js",
     "test": "echo \"Error: no test specified\" && exit 0"
   }
