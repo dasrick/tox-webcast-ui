@@ -13,9 +13,12 @@
     "url": "https://github.com/dasrick/tox-webcast-ui/issues"
   },
   "homepage": "https://github.com/dasrick/tox-webcast-ui#readme",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.13.3"
+  },
   "devDependencies": {},
   "scripts": {
+    "start": "node serve.js",
     "test": "echo \"Error: no test specified\" && exit 0"
   }
 }
