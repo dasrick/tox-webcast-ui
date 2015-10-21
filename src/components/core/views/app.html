@@ -1,33 +1,29 @@
-<header class="cs-3">
-    <aside class="col-left brand">
-        <a class="navbar-brand"
-           title="{{'core.application.label'|translate}} - {{coreVm.appversion}}"
-           ui-sref="app">
-            <i class="fa {{'core.application.icon'|translate}}"></i>
-            <span class="hidden-folded" translate="core.application.label"></span>
-        </a>
-    </aside>
-    <aside class="col-main" ui-view="header-middle"></aside>
-    <aside class="col-right" ui-view="header-right"></aside>
-</header>
+<div class="container">
+    <header>
+        <a class="brand">swisscom</a>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col-sm-9">
 
-<main uxi-view="main">
-    <aside class="cs-1 col-main-full" uxi-view="content">
-        <section class="section-body">
-           mep
-        </section>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div mi24-video-player
+                             video-id="8aMbDfqNu5nazEd1XEE52Z"
+                             player-id="6_JTD5mVMTsGNh2VTGwWWu"
+                             config-type="vmpro"
+                             flash-path="//e.video-cdn.net/v2/"
+                             api-url="//d.video-cdn.net/play"></div>
+                        <script src="//e.video-cdn.net/v2/embed.js"></script>
+                    </div>
+                    <div class="col-sm-6"></div>
+                </div>
 
-        <section class="section-foot">
-            <ul class="nav text-center">
-                <li>
-                    <a ui-sref="app">
-                        currently: v{{coreVm.appversion}}
-                    </a>
-                </li>
-            </ul>
-        </section>
-    </aside>
-</main>
+            </div>
+            <div class="col-sm-3">333</div>
+        </div>
+    </main>
+</div>
 
 <div class="global-alerts" ng-cloak>
     <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="alert.close()">{{alert.msg}}</uib-alert>
