@@ -1,0 +1,7 @@
+{
+  "name":"tox-webcast-ui",
+  "description":"AngularJS frontend application for Live Streaming",
+  "scripts":{},
+  "env":{},
+  "addons":[]
+}
