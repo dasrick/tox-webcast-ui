@@ -4,7 +4,8 @@
 [![Build Status](https://travis-ci.org/dasrick/tox-webcast-ui.svg?branch=master)](https://travis-ci.org/dasrick/tox-webcast-ui)
 [![dependency Status](https://david-dm.org/dasrick/tox-webcast-ui/status.svg)](https://david-dm.org/dasrick/tox-webcast-ui#info=dependencies)
 [![devDependency Status](https://david-dm.org/dasrick/tox-webcast-ui/dev-status.svg)](https://david-dm.org/dasrick/tox-webcast-ui#info=devDependencies)
-[![Heroku Badge](https://img.shields.io/badge/deployed%20to-Heroku-7056bf.svg)](https://tox-webcast.herokuapp.com/)
+[![Heroku Badge](https://img.shields.io/badge/staging%20to-Heroku-7056bf.svg)](https://mi-webcast-qa.herokuapp.com/)
+[![Heroku Badge](https://img.shields.io/badge/production%20to-Heroku-7056bf.svg)](https://mi-webcast.herokuapp.com/)
 [![Apiary Badge](https://img.shields.io/badge/apiary-docs-green.svg)](http://docs.ticketprint.apiary.io/)
 [![License](https://img.shields.io/github/license/dasrick/tox-webcast-ui.svg)](https://github.com/dasrick/tox-webcast-ui/blob/master/LICENSE)
 

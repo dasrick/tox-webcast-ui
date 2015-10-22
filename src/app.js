@@ -20,7 +20,7 @@ var requires = [
   require('./components').name
 ];
 
-angular.module('tox-ticketprint-ui-app', requires)
+angular.module('tox-webcast-ui-app', requires)
 
   // redirect for unknown routes ///////////////////////////////////////////////////////////////////////////////////////
   .config(function ($urlRouterProvider, $locationProvider, $resourceProvider) {
@@ -77,4 +77,4 @@ angular.module('tox-ticketprint-ui-app', requires)
 
 ;
 
-angular.bootstrap(document, ['tox-ticketprint-ui-app']);
+angular.bootstrap(document, ['tox-webcast-ui-app']);
