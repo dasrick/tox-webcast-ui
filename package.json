@@ -20,7 +20,6 @@
     "angular-translate-loader-partial": "^2.8.1",
     "angular-ui-router": "^0.2.15",
     "bootstrap": "^3.3.5",
-    "bower": "^1.6.3",
     "clean-css": "^3.4.6",
     "express": "^4.13.3",
     "font-awesome": "^4.4.0",
@@ -48,7 +47,7 @@
     "phantomjs": "^1.9.18"
   },
   "scripts": {
-    "postinstall": "bower install && npm run build",
+    "postinstall": "npm run build",
     "prebuild": "mkdir -p web/css/ web/js/ web/views/ web/fonts/font-awesome web/i18n",
     "build": "npm run build:css && npm run build:views && npm run build:fonts && npm run build:i18n && npm run jscs && npm run jshint && npm run build:js",
     "build:js": "webpack --config webpack.config.js",

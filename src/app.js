@@ -8,13 +8,13 @@ require('angular-resource');
 require('angular-translate');
 require('angular-translate-loader-partial');
 require('angular-ui-router');
-require('mi24-player');
+//require('mi24-player');
 
 var requires = [
   'ngResource',
   'pascalprecht.translate',
   'ui.router',
-  'Mi24HTMLPlayer',
+  //'Mi24HTMLPlayer',
   require('./components').name
 ];
 

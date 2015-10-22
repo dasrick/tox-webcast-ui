@@ -8,4 +8,5 @@ module.exports = function () {
 
   //////////
 
+  window.VideoPlayerCollection.addPlayerById('live-stream-video');
 };
