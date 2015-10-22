@@ -8,9 +8,9 @@ describe('Components:Core:Controller:CoreController', function () {
 
   beforeEach(function () {
     var fakeWindow = {VideoPlayerCollection: {addPlayerById: jasmine.createSpy()}};
-    angular.mock.module(function ($provide) {
-      $provide.value('$window', fakeWindow);
-    });
+    //angular.mock.module(function ($provide) {
+    //  $provide.value('$window', fakeWindow);
+    //});
     angular.mock.inject(function ($injector) {
       var $controller = $injector.get('$controller');
       $q = $injector.get('$q');
