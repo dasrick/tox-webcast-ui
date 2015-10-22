@@ -14,3 +14,5 @@ web/fonts/*
 web/i18n/*
 web/js/*
 web/views/*
+
+.idea
