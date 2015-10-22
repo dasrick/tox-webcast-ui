@@ -2,6 +2,9 @@ var webpack = require('webpack');
 var path = require('path');
 var srcPath = path.resolve(__dirname, 'src', 'app.js');
 var dstPath = path.resolve(__dirname, 'web', 'js');
+var resolveBowerPath = function (componentPath) {
+  return path.join(__dirname, 'bower_components', componentPath);
+};
 
 var config = {
 
@@ -21,7 +24,7 @@ var config = {
       {
         test: /\.js$/,
         loader: 'ng-annotate-loader', // works RTL - example 'ng-annotate!jshint'
-        exclude: /node_modules|coverage|scripts|web/
+        exclude: /node_modules|coverage|scripts|web|bower_components/
       }
     ]
   },
@@ -35,7 +38,12 @@ var config = {
     //new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.DedupePlugin()
-  ]
+  ],
+  resolve: {
+    alias: {
+      'mi24-player': resolveBowerPath('/mi24-player/angular-player')
+    }
+  }
 };
 
 module.exports = config;

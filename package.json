@@ -15,12 +15,12 @@
   "homepage": "https://github.com/dasrick/tox-webcast-ui#readme",
   "dependencies": {
     "angular": "^1.4.7",
-    "angular-loading-bar": "^0.8.0",
     "angular-resource": "^1.4.7",
     "angular-translate": "^2.8.1",
     "angular-translate-loader-partial": "^2.8.1",
     "angular-ui-router": "^0.2.15",
     "bootstrap": "^3.3.5",
+    "bower": "^1.6.3",
     "clean-css": "^3.4.6",
     "express": "^4.13.3",
     "font-awesome": "^4.4.0",
@@ -32,7 +32,6 @@
     "json-loader": "^0.5.3",
     "less": "^2.5.3",
     "less-plugin-autoprefix": "^1.5.1",
-    "mi-angular-alert-service": "^2.0.4",
     "ng-annotate-loader": "0.0.10",
     "webpack": "^1.12.2"
   },
@@ -49,7 +48,7 @@
     "phantomjs": "^1.9.18"
   },
   "scripts": {
-    "postinstall": "npm run build",
+    "postinstall": "bower install && npm run build",
     "prebuild": "mkdir -p web/css/ web/js/ web/views/ web/fonts/font-awesome web/i18n",
     "build": "npm run build:css && npm run build:views && npm run build:fonts && npm run build:i18n && npm run jscs && npm run jshint && npm run build:js",
     "build:js": "webpack --config webpack.config.js",

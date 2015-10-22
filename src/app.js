@@ -4,19 +4,17 @@
  */
 var angular = require('angular');
 
-require('angular-loading-bar');
 require('angular-resource');
 require('angular-translate');
 require('angular-translate-loader-partial');
 require('angular-ui-router');
-require('mi-angular-alert-service');
+require('mi24-player');
 
 var requires = [
-  'angular-loading-bar',
   'ngResource',
   'pascalprecht.translate',
   'ui.router',
-  'mi.AlertService',
+  'Mi24HTMLPlayer',
   require('./components').name
 ];
 
@@ -57,21 +55,6 @@ angular.module('tox-webcast-ui-app', requires)
     if ((language !== null) || !language.match(/(de).*/)) {
       return $translateProvider.preferredLanguage('de');
     }
-  })
-  // ===================================================================================================================
-
-  // angular-loading-bar ///////////////////////////////////////////////////////////////////////////////////////////////
-  .config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
-    cfpLoadingBarProvider.includeSpinner = false;
-  }])
-  // ===================================================================================================================
-
-  // mi-angular-alert-service //////////////////////////////////////////////////////////////////////////////////////////
-  .constant('ALERT_LEVELS', {
-    danger: {timeout: 10000},
-    warning: {timeout: 5000},
-    success: {timeout: 3000},
-    info: {timeout: 3000}
   })
   // ===================================================================================================================
 
