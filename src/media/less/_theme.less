@@ -69,11 +69,41 @@ main {
       }
     }
     &.section-body {
-      //background-color: #fcfcfc;
+      .panel {
+        margin-bottom: 10px;
+        .panel-heading {
+          padding: 5px 10px;
+          background-color: #f2f2f2;
+        }
+        .panel-body {
+          padding: 10px;
+        }
+        p {
+          margin-bottom: 0;
+          color: #999;
+          font-weight: 300;
+          &.date {
+            text-align: right;
+          }
+          &.name {
+            color: #666;
+            font-weight: 600;
+          }
+          &.company {
+
+          }
+          &.comment {
+            color: #666;
+          }
+        }
+      }
+      .panel-default {
+        border-color: #ddd;
+        background-color: #e4e4e4;
+      }
     }
     &.section-foot {
       border-top: 1px solid #d1d1d1;
-      //background-color: #fcfcfc;
     }
   }
 }
