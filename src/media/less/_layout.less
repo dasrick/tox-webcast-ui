@@ -9,6 +9,26 @@ main > .row,
 
 header {
   height: @header-height;
+  position: relative;
+  > aside {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    &.col-left {
+      left: 0;
+      width: @header-col-left-width;
+      text-align: center;
+    }
+    &.col-main {
+      left: @header-col-left-width;
+      right: @header-col-right-width;
+    }
+    &.col-right {
+      right: 0;
+      width: @header-col-right-width;
+      text-align: right;
+    }
+  }
 }
 
 main {
@@ -19,4 +39,27 @@ main {
 .column-content {
   padding-top: @grid-gutter-half;
   padding-bottom: @grid-gutter-half;
+}
+
+.column-chat {
+  position: relative;
+  > section {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    &.section-head {
+      top: 0;
+      height: @chat-section-head-height;
+    }
+    &.section-body {
+      top: @chat-section-head-height;
+      bottom: @chat-section-foot-height;
+    }
+    &.section-foot {
+      bottom: 0;
+      height: @chat-section-foot-height;
+      padding-top: 15px;
+    }
+  }
 }
