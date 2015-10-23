@@ -51,6 +51,18 @@ main {
     &.section-head {
       top: 0;
       height: @chat-section-head-height;
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+        > div {
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
     }
     &.section-body {
       top: @chat-section-head-height;
@@ -61,6 +73,9 @@ main {
       bottom: 0;
       height: @chat-section-foot-height;
       padding-top: 15px;
+      .form-group:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
