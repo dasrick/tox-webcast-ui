@@ -1,29 +1,126 @@
-<div class="container">
-    <header>
+<header>
+    <aside class="col-left">
         <a class="brand">swisscom</a>
-    </header>
-    <main>
-        <div class="row">
-            <div class="col-sm-9">
-                <div class="row">
-                    <div class="col-sm-6">
+    </aside>
+    <aside class="col-main">
+        <p>Die neue Live-Strea Präsentationsoberfläche</p>
+    </aside>
+    <aside class="col-right">
+        <!--
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        -->
+    </aside>
+</header>
 
-                        <div id="live-stream-video"
-
-                             mi24-video-player
-                             config-type="vmpro"
-                             flash-path="//e.video-cdn.net/v2/"
-
-                             video-id="6YFXcBHT227SrUeoNCeFiK"
-                             player-id="6YFXcBHT227SrUeoNCeFiK"
-                             api-url="//private-b1f38-elfriede.apiary-mock.com"></div>
-
+<main>
+    <div class="row">
+        <div class="col-sm-9 column-content">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="live-stream-video"
+                         mi24-video-player
+                         config-type="vmpro"
+                         flash-path="//e.video-cdn.net/v2/"
+                         video-id="6YFXcBHT227SrUeoNCeFiK"
+                         player-id="6YFXcBHT227SrUeoNCeFiK"
+                         api-url="//private-b1f38-elfriede.apiary-mock.com"></div>
+                </div>
+                <div class="col-sm-6">
+                    <img class="img-responsive"
+                         src="http://img1.auto-motor-und-sport.de/Mercedes-SLS-AMG-Black-Series-Frontansicht-Kurvenfahrt-articleTitle-9095988c-743214.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 column-chat">
+            <section class="section-head">
+                <a href="#">
+                    <div class="row">
+                        <div class="col-sm-5 heading">
+                            <i class="fa fa-fw fa-comment"></i>
+                            <span>Chat</span>
+                        </div>
+                        <div class="col-sm-7 hint">
+                            <span class="hint">Chat verstecken</span>
+                            <i class="fa fa-fw fa-angle-double-right"></i>
+                        </div>
                     </div>
-                    <div class="col-sm-6"></div>
+                </a>
+            </section>
+            <section class="section-body">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p class="date">04.12.2012 13:37:62</p>
+
+                        <p class="name">Enrico Hoffmann</p>
+
+                        <p class="company">movingimage</p>
+                    </div>
+                    <div class="panel-body">
+                        <p class="comment">
+                            ... und für das kleine Schwarze spenden Sie bitte auf folgendes schweizer Nummern-Konto: ...
+                        </p>
+                    </div>
                 </div>
 
-            </div>
-            <div class="col-sm-3">333</div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p class="date">23.12.2012 13:24:23</p>
+
+                        <p class="name">Kenny Wölfer</p>
+
+                        <p class="company">movingimage</p>
+                    </div>
+                    <div class="panel-body">
+                        <p class="comment">
+                            Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius
+                            blandit sit amet non magna.
+                        </p>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p class="date">24.12.2012 13:24:23</p>
+
+                        <p class="name">Stefan Paletta</p>
+
+                        <p class="company">movingimage</p>
+                    </div>
+                    <div class="panel-body">
+                        <p class="comment">
+                            Maecenas hacker news eget risus varius blandit sit amet non magna.
+                        </p>
+                    </div>
+                </div>
+
+
+            </section>
+            <section class="section-foot">
+                <form>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" placeholder="Ihre Chat-Nachricht"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-block btn-primary">Senden</button>
+                    </div>
+                </form>
+            </section>
         </div>
-    </main>
-</div>
+    </div>
+</main>

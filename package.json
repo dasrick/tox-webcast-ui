@@ -32,6 +32,7 @@
     "less": "^2.5.3",
     "less-plugin-autoprefix": "^1.5.1",
     "ng-annotate-loader": "0.0.10",
+    "npm-font-source-sans-pro": "0.0.3",
     "webpack": "^1.12.2"
   },
   "devDependencies": {
@@ -48,13 +49,14 @@
   },
   "scripts": {
     "postinstall": "npm run build",
-    "prebuild": "mkdir -p web/css/ web/js/ web/views/ web/fonts/font-awesome web/i18n",
+    "prebuild": "mkdir -p web/css/ web/js/ web/views/ web/fonts/font-awesome web/fonts/source-sans-pro web/i18n",
     "build": "npm run build:css && npm run build:views && npm run build:fonts && npm run build:i18n && npm run jscs && npm run jshint && npm run build:js",
     "build:js": "webpack --config webpack.config.js",
     "build:css": "lessc --strict-math='on' --autoprefix='last 2 versions,ie 9' src/media/less/style.less web/css/style.css && cleancss --source-map -o web/css/style.min.css web/css/style.css",
     "build:views": "node scripts/copy.js src/**/views/*.html web/views/",
-    "build:fonts": "npm run build:font-fontawesome",
+    "build:fonts": "npm run build:font-fontawesome && npm run build:font-sourcesanspro",
     "build:font-fontawesome": "cp -R node_modules/font-awesome/fonts/* web/fonts/font-awesome",
+    "build:font-sourcesanspro": "cp -R node_modules/npm-font-source-sans-pro/fonts/* web/fonts/source-sans-pro",
     "build:i18n": "node scripts/copy.js src/**/translations/*.json web/i18n/",
     "jscs": "jscs ./src ./tests ./scripts",
     "jshint": "jshint ./src ./tests ./scripts --reporter node_modules/jshint-stylish/index.js",
